@@ -1237,7 +1237,7 @@ func (t *TextView) Draw(screen tcell.Screen) {
 			}
 
 			// If the highlight is too far to the right, move it to the middle.
-			if t.wrap {
+			//if t.wrap {
 				// Find the first highlight's column in screen space.
 				line := t.lineIndex[fromHighlight]
 				st := *line.state
@@ -1257,7 +1257,7 @@ func (t *TextView) Draw(screen tcell.Screen) {
 				if posHighlight-t.columnOffset < 0 {
 					t.columnOffset = posHighlight - width/4
 				}
-			}
+			//}
 		}
 	}
 	t.scrollToHighlights = false
